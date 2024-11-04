@@ -484,6 +484,7 @@ bullseye_scores <- function(data, locations, window_sizes = 1:10, ratio_to_co = 
 #'
 #' @return Returns a circular bullseye plot.
 #' @importFrom dplyr bind_rows
+#' @importFrom ggplot2 ggplot
 #' @export
 #'
 bullseye_plot <- function(scores){
@@ -543,6 +544,7 @@ bullseye_plot <- function(scores){
 #' @param max_pairs Specify maximum number of cell pairs to consider. Lower number increases computational efficiency.
 #'
 #' @return Returns a p-value and distance distributions between cross-expressing cells and cross-expressing and random cells.
+#' @importFrom ggplot2 ggplot
 #' @export
 #'
 spatial_enrichment <- function(data, locations, gene1, gene2, neighbor = 1, max_pairs = 20000){
@@ -627,6 +629,7 @@ spatial_enrichment <- function(data, locations, gene1, gene2, neighbor = 1, max_
 #'
 #' @return Returns a plot with cells shown as points and color indicating the genes it expresses.
 #' @import Matrix
+#' @importFrom ggplot2 ggplot
 #' @export
 #'
 tissue_expression_plot <- function(data, locations, gene1, gene2, cross_expression = TRUE, neighbor = 1, point_size = 0, scale_bar = 0){
